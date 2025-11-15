@@ -1,4 +1,5 @@
 import uuid
+from datetime import datetime
 
 from sqlalchemy import Column, String, DateTime
 
@@ -10,6 +11,6 @@ class AnonymousBoard(Base):
 
     id = Column(String(36), primary_key=True,
                 default=lambda: str(uuid.uuid4()))
-    titile = Column(String(255), nullable=False)
+    title = Column(String(255), nullable=False)
     content = Column(String(1000), nullable=False)
-    created_at = Column(DateTime, nullable=False)
+    created_at = Column(DateTime, default=datetime.utcnow)
