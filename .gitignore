@@ -1,0 +1,22 @@
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+### Python Patch ###
+# Postry local configuration file
+poetry.toml
+
+# ruff
+.ruff_cache/
+
+# LSP config files
+pyrightconfig.json
+
+# exclude .idea
+.idea
+
+# exclude .env
+.env
+*.pyc
