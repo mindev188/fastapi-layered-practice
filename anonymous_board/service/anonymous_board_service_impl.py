@@ -14,6 +14,7 @@ class AnonymousBoardServiceImpl(AnonymousBoardService):
         if cls.__instance is None:
             cls.__instance = super().__new__(cls)
             cls.__instance.anonymous_board_repository = (
+                AnonymousBoardRepositoryImpl.getInstance())
 
         return cls.__instance
 
