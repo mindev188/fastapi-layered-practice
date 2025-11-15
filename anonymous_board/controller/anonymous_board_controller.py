@@ -17,8 +17,7 @@ anonymous_board_controller = APIRouter(prefix="/board")
 board_service = AnonymousBoardServiceImpl.getInstance()
 
 # @PostMapping("/create")
-@anonymous_board_controller.post("/create",
-                                 response_model=AnonymousBoardResponse)
+@anonymous_board_controller.post("/create", response_model=AnonymousBoardResponse)
 def create_anonymous_board(request: CreateAnonymousBoardRequest):
     # 실제로 역할과 책임 관점에서 객체를 분리시키는 것이 더 좋은데
     # request로 퉁치는 것 보다 request_form과 request를 분리시키는 것이 더 좋음
